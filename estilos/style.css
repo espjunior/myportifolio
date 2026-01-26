@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../imagens/bg-03.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ---- MENU HAMBURGUER ---- */
+/* Classe para travar o scroll quando o menu abrir */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Seleciona todas as seções que você linkou no menu */
+#home, #sobre, #projetos {
+    scroll-margin-top: 85px; /* Altura do header (aprox 70px) + 15px de respiro */
+}
+
+
+/* Esconder o hambúrguer em telas grandes */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 2000;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: yellowgreen;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mostra o botão no mobile */
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido fora da tela */
+        width: 100%;
+        height: 100vh;
+
+        /* Efeito Vidro Fumê */
+        background-color: rgba(1, 41, 50, 0.85); /* Cor com transparência (o 0.85) */
+        backdrop-filter: blur(10px); /* O borrão no fundo */
+        -webkit-backdrop-filter: blur(10px); /* Compatibilidade para Safari */
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        z-index: 1500;
+    }
+
+    .nav-list.active {
+        right: 0; /* Entra na tela */
+    }
+
+    /* Animação do X no hambúrguer */
+    .hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+}
+
+
+
+/* ----- HEADER ----- */
+.header {
+    position: fixed; /*Permanecer no topo*/
+    width: 100%; /*Ele vai ocupar toda a largura*/
+    top: 0; /*Vai ficr colado no Topo*/
+    z-index: 1000; /*Garantir que ele fique por cima da imagem*/
+    background-color: rgb(1, 41, 50);
+}
+
+.container {
+    max-width: 1200px; /*Em telas maiores manterá a mesma proporção logo e menu*/
+    margin: 0 auto; /*CENTRALIZAÇÃO ABSOLUTA - Está dividindo o max-width de esquerda e direita*/
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+/* texto do Menu */
+.nav-list a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.nav-list a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    color: greenyellow; /* Opcional: muda a cor ao mesmo tempo*/
+    font-weight: 600;
+}
+
+/* ----- MAIN ----- */
+
+/* Imagem do fundo e o texto centralizado */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../imagens/bg-03.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex; /* Ativa o modo Flexbox */
+    justify-content: center; /* Centro horizontal */
+    align-items: center; /* Centro vertical */
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: yellowgreen;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.hero-content h2 {
+    color: yellowgreen;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.hero-content p {
+    color: yellowgreen;
+    font-size: 1.5rem;
+    font-weight: 100;
+
+}
+
+/* ---- SOBRE ---- */
+
+
+.container-formatacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.textoimagem-sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+
+    margin-top: 10%;
+    margin-bottom: 180px;
+    
+}
+
+.img-sobre img {
+    width: 250px;
+
+}
+
+.texto-sobre p { /*Texto do SOBRE*/
+    color: yellowgreen;
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+
+/* PROJETOS */
+
+.texto-projetos h2, p {
+    color: yellowgreen;
+}
+
+.texto-projetos h2 {
+    margin-top: 70px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.texto-projetos p {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.projeto-formatacao {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projetosfeitos a { /*Botão Verificar*/
+    color: blue;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: greenyellow;
+    width: 100px;
+    padding: 15px;
+
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+}
+
+.projetosfeitos a:hover {
+    background-color: gold;
+    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    color: black; /* Opcional: muda a cor ao mesmo tempo*/
+    font-weight: 600;
+}
+
+
+
+.projetosfeitos {
+    width: 300px;
+    border: 5px solid  rgba(172, 255, 47, 0.557);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.projetosfeitos img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.projetosfeitos h3 {
+    color: greenyellow;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.projetosfeitos p {
+    font-size: 1.3rem;
+    color: greenyellow;
+    font-weight: bold;
+}
+
