@@ -326,3 +326,15 @@ body.no-scroll {
     color: greenyellow;
     font-size: 1.5rem;
 }
+
+.rodape-final {
+    background-color: rgb(1, 41, 50);
+    height: 50px;
+
+    margin: 0 auto; /*CENTRALIZAÇÃO ABSOLUTA - Está dividindo o max-width de esquerda e direita*/
+    padding: 1rem 2rem;
+
+    border-top: solid 5px black;
+    text-align: center;
+}
+
