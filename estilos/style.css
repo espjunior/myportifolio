@@ -289,7 +289,7 @@ body.no-scroll {
 /* FOOTER */
 .rodape {
     background-color: rgb(1, 41, 50);
-    height: 200px;
+    height: 300px;
 
     margin: 0 auto; /*CENTRALIZAÇÃO ABSOLUTA - Está dividindo o max-width de esquerda e direita*/
     padding: 1rem 2rem;
@@ -312,7 +312,7 @@ body.no-scroll {
 
 .contatos-footer p {
     color: greenyellow;
-    font-size: 1.5;
+    font-size: 1.5rem;
 }
 
 .midia-sociais-icon {
