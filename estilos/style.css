@@ -286,3 +286,43 @@ body.no-scroll {
     font-weight: bold;
 }
 
+/* FOOTER */
+.rodape {
+    background-color: rgb(1, 41, 50);
+    height: 200px;
+
+    margin: 0 auto; /*CENTRALIZAÇÃO ABSOLUTA - Está dividindo o max-width de esquerda e direita*/
+    padding: 1rem 2rem;
+}
+
+.rodape p {
+    color: #fff;
+}
+
+.rodape h4 {
+    font-size: 1.2rem;
+    color: greenyellow;
+    margin-bottom: 5px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contatos-footer p {
+    color: greenyellow;
+    font-size: 1.5;
+}
+
+.midia-sociais-icon {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.midia-sociais-icon a {
+    color: greenyellow;
+    font-size: 1.5rem;
+}
