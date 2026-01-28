@@ -124,7 +124,7 @@ body.no-scroll {
     display: inline-block;
     transition: transform 0.3s ease;
     text-decoration: none;
-    color: yellowgreen;
+    color: #9acd32;
 }
 
 .nav-list a:hover {
