@@ -295,14 +295,12 @@ body.no-scroll {
     padding: 1rem 2rem;
 }
 
-.rodape p {
-    color: #fff;
-}
-
 .rodape h4 {
     font-size: 1.2rem;
     color: greenyellow;
+    margin-top: 50px;
     margin-bottom: 5px;
+    text-align: left;
 }
 
 .rodape {
@@ -313,6 +311,7 @@ body.no-scroll {
 .contatos-footer p {
     color: greenyellow;
     font-size: 1.5rem;
+    line-height: 50px;
 }
 
 .midia-sociais-icon {
